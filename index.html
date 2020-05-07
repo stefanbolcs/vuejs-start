@@ -2,14 +2,12 @@
 <html>
     <head>
         <title></title>
-        <style>
-            .color-red {color:red;}
-        </style>
+        
     </head>
     <body>
         <div id="root">
             
-            <h1 :class="className">Hello world</h1>
+            <h1 >{{reversedMessage}}</h1>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -18,7 +16,12 @@
             let app = new Vue ({
                 el: '#root',
                 data: {
-                   className: 'color-red'
+                   message: 'Hello world'
+                },
+                computed:{
+                    reversedMessage(){
+                        return this.message.split('').reverse().join('');
+                    }
                 }
 
               
