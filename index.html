@@ -6,7 +6,7 @@
     <body>
         <div id="root">
             
-            <button v-bind:title="title">Hover over me</button>
+            <h1 :class="className">Hello world</h1>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -15,7 +15,7 @@
             let app = new Vue ({
                 el: '#root',
                 data: {
-                   title:'Now the title is being set through javascript'
+                   className: 'color-red'
                 }
 
               
