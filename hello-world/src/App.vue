@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
+     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/> -->
+    <router-view/> 
     
     <h1 v-for="(item,index) in posts" :key="index">{{item.title}}</h1>
    
