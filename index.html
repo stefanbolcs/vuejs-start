@@ -38,6 +38,7 @@
 
                 },
                 actions:{
+                    //you can call dispatch actions with  this.$store.dispatch('fetchTodos')
                     fetchTodos(context){
                         context.commit('SET_LOADING_STATUS','loading')
                         axios.get('/api/todos').then(response=> {
