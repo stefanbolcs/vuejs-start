@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
         <title></title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.css">        
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <style type="text/css">body {padding-top:40px;}</style>
     </head>
     <body>
+        
         <div id="root" class="container">
+            <div class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
 
-            <message title="Hello world" body="lorem ipsum delore et met">
-                </message>
 
-           
+                </div>
+                <button class="modal-close"></button>
+            </div>
+
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="main.js"></script>
+        <script>
+            const store = new Vuex.Store({
+                state:{
+                        loadingStatus:'notLoading',
+                        todos:[]
+                },
+                mutations:{
+                    SET_LOADING_STATUS(state,status){
+                        state.loadingStatus = status
+                    },
+                    SET_TODOS(state, todos){
+                        state.todos = todos
+                    }
+
+                },
+                actions:{
+                    fetchTodos(context){
+                        context.commit('SET_LOADING_STATUS','loading')
+                        axios.get('/api/todos').then(response=> {
+                            context.commit('SET_LOADING_STATUS','notLoading')
+                            context.commit('SET_TODOS',response.data.todos)
+                        })
+                    }
+
+                },
+                getters:{
+                    //if for example you only want todos that are done
+                    doneTodos(state){
+                        return state.todos.filter(todo=>todo.done)
+                    }
+
+                }
+
+            });
+        </script>
     </body>
 </html>
