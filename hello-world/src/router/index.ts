@@ -32,7 +32,7 @@ Vue.use(VueRouter)
     component: Contact
   },
   {
-    path: '/friends',
+    path: '/friends/:id/:age/:weight',
     name: 'Friends',
     component: Friends
   }
