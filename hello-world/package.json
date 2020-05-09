@@ -34,5 +34,9 @@
     "eslint-plugin-vue": "^6.2.2",
     "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": ".eslintrc.js",
+  "author": "",
+  "license": "ISC"
 }

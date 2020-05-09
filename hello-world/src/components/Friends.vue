@@ -4,7 +4,7 @@
     {{$route.params.age}}
     {{$route.params.weight}}
 
-    {{id}} {{ age}} {{weight}}
+   
 </template>
 
 <script>
