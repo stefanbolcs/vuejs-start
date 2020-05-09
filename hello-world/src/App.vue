@@ -10,6 +10,11 @@
     <router-view/> 
     <Test v-bind:header="header"/>
     <Test2 v-bind:header="header"/>
+    <Tabs />
+
+    
+
+
 
     
     <!-- <h1 v-for="(item,index) in posts" :key="index">{{item.title}}</h1> -->
@@ -19,8 +24,9 @@
 
 <script>
 import {mapState} from 'vuex'
-import Test from './components/Test';
-import Test2 from './components/Test2';
+import Test from './components/Test'
+import Test2 from './components/Test2'
+import Tabs from './components/Tabs'
 export default {
   name:'app',
   mounted(){
@@ -32,7 +38,7 @@ export default {
     ])
   },
   components:{
-    Test, Test2
+    Test, Test2, Tabs
   },
   data(){
     return {
