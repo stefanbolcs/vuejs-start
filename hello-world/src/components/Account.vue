@@ -4,6 +4,7 @@
 
 <script>
 export default {
+    namespaced: true,
     
 }
 </script>

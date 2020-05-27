@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import Account from '@/components/Account'
-import Contact from '@/components/Contact'
-import Friends from '@/components/HelloWorld'
+import Account from '@/components/Account.vue'
+import Contact from '@/components/Contact.vue'
+import Friends from '@/components/Friends.vue'
 
 Vue.use(VueRouter)
 
