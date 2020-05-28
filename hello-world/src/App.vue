@@ -39,6 +39,7 @@ import Test from "./components/Test";
 import Test2 from "./components/Test2";
 import Tabs from "./components/Tabs";
 import Tab from "./components/Tab";
+import Coupon from "./components/Coupon";
 export default {
   name: "app",
   mounted() {
@@ -52,10 +53,12 @@ export default {
     Test2,
     Tabs,
     Tab,
+    Coupom,
   },
   data() {
     return {
       header: "initial header",
+      couponApplied: false,
     };
   },
 };
